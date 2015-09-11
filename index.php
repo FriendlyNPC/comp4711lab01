@@ -7,7 +7,16 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>BCIT COMP 4711 Lab 01</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
     </head>
     <body>
         <?php
@@ -30,7 +39,7 @@ and open the template in the editor.
         $second->first_name = "Albert";
         $second->add_email('home','albert@braniacs.com');
         $second->add_email('work','a_einstein@bcit.ca');
-        $second->add_email('work','albert@physics.mit.edu');
+        $second->add_email('work2','albert@physics.mit.edu');
         $second->add_grade(95);
         $second->add_grade(80);
         $second->add_grade(50);
@@ -50,6 +59,7 @@ and open the template in the editor.
         
         foreach($students as $student){
             echo $student->toString();
+            echo "<br>";
         } 
         ?>
     </body>

@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Student
+ * Description of a Student.
  *
  * @author Devan
  */
@@ -42,7 +42,7 @@ class Student {
     }
     
     /**
-     * 
+     * calculates the average grade for the student
      * @return type
      */
     function average(){
@@ -54,25 +54,30 @@ class Student {
     }
     
     function toString(){
-        
+        //make a panel for a student 
         $result = '<div class="panel panel-primary panel-center">';
+        
+        //the header of the panel will be the student name
         $result .= '<div class="panel-heading">'.$this->first_name . ' '  
                 . $this->surname.'</div>';
+        
+        //contents of the panel
         $result .= '<div class="panel-body">';
         $result .= '<h6>Average:</h3>'.$this->average().'</br>';
         $result .= '<h6>Email:</h3>';
-        $result .= '<table class="table table-striped">';
-                
+        
+        //build a table for the email addresses
+        $result .= '<table class="table table-striped">';        
         foreach($this->emails as $which=>$what){
             $result .= '<tr>';
             $result .= '<td>'.$which.'</td>';
             $result .= '<td>'.$what.'</td>';
             $result .= '</tr>';
         }
+        //close table, panel body, and panel divs
         $result .= '</table>';
         $result .= "</div></div>";
+        
         return $result;
-        
-        
     }
 }
